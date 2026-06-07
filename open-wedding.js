@@ -59,6 +59,9 @@ function moveThumb(clientX) {
 
     let x = clientX - rect.left;
 
+    // tăng độ nhạy
+    x *= 3;
+
     x = Math.max(3, Math.min(x, 190));
 
     thumb.style.left = x + "px";
