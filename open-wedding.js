@@ -2,6 +2,9 @@ const page = document.querySelector(".page");
 const insideRight = document.querySelector(".inside-right");
 const thumb = document.querySelector(".slider-thumb");
 const track = document.querySelector(".slider-track");
+track.addEventListener("touchstart", () => {
+    alert("touch ok");
+});
 
 let isOpen = false;
 let dragging = false;
