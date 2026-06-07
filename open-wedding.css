@@ -14,7 +14,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    top: -5px;
+    top: -10px;
 }
 .page{
     width: 650px;
