@@ -387,3 +387,14 @@ body{
     left: 3px;
     cursor: grab;
 }
+@media (max-width: 768px){
+
+    body{
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .card-container{
+        zoom: 0.28;
+    }
+}
