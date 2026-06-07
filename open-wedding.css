@@ -396,6 +396,7 @@ body{
     }
 
     .card-container{
-        zoom: 0.3;
+        transform: scale(0.3);
+        left: 130px;
     }
 }
