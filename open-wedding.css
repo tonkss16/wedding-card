@@ -1,0 +1,388 @@
+body{
+    background-color: #ad9280;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+.card-container{
+    position: relative;
+    width: 1300px;
+    height: 900px;
+    perspective: 2500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 5px;
+}
+.page{
+    width: 650px;
+    height: 900px;
+    position: absolute;
+    right: 325px;
+    transform-style: preserve-3d;
+    transform-origin: left center;
+    transition: transform 1.4s ease;
+    backface-visibility: hidden;
+    z-index: 100;
+}
+.page.open{
+    transform: rotateY(-180deg);
+}
+.page.open.move{
+    transform: translateX(325px) rotateY(-180deg);
+    transition: transform 1.4s ease;
+}
+.inside-right{
+    transition: transform 1.4s ease;
+}
+.inside-right.move{
+    transform: translateX(325px);
+}
+.cover{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    transform-origin: left center;
+    transition: transform 1.8s ease;
+    backface-visibility: hidden;
+    z-index: 2;
+}
+.background-out{
+    width: 650px;
+    height: 900px;
+    position: absolute;
+}
+.content1{
+    width: 550px;
+    height: 770px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.wedding1{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 2px solid #9b7450;
+    margin-top: -350px;
+    position: absolute;
+    object-fit: cover;
+}
+.picture{
+    width: 100%;
+}
+.leaf1, .leaf2{
+    width: 230px;
+}
+.leaf1{
+    position: relative;
+    top: -150px;
+    left: 250px;
+}
+.leaf2{
+    transform: rotate(180deg);
+    position: relative;
+    top: -268px;
+    right: 166px;
+}
+.flower1, .flower2{
+    width: 400px;
+    position: absolute;
+    z-index: 10;
+}
+.flower1{
+    transform: rotate(20deg);
+    top: 345px;
+    left: 260px;
+    mask-image: linear-gradient(
+        to top,
+        transparent 0%,
+        rgba(0,0,0,0.3) 15%,
+        black 35%
+    );
+
+    -webkit-mask-image: linear-gradient(
+        to top,
+        transparent 0%,
+        rgba(0,0,0,0.3) 15%,
+        black 35%
+    );
+    filter: drop-shadow(0 8px 12px rgba(0,0,0,0.25));
+}
+.flower2{
+    transform: rotate(200deg);
+    top: -140px;
+    right: 200px;
+    mask-image: linear-gradient(
+        to top,
+        transparent 0%,
+        rgba(0,0,0,0.3) 15%,
+        black 35%
+    );
+
+    -webkit-mask-image: linear-gradient(
+        to top,
+        transparent 0%,
+        rgba(0,0,0,0.3) 15%,
+        black 35%
+    );
+    filter: drop-shadow(0 8px 12px rgba(0,0,0,0.25));
+}
+.name1{
+    color: #6b5746;
+    margin-top: -220px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 60px;
+    position: relative;
+    bottom: -30px;
+}
+.day1{
+    color: #6b5746;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    width: 500px;
+    font-family: 'Comfortaa', cursive;
+    margin-left: 40px;
+    position: relative;
+    bottom: -100px;
+}
+
+.days{
+    font-size: 25px;
+    height: 65px;
+    text-align: right;
+    padding-right: 30px;
+    border-right: 1px solid #777;
+}
+
+.date{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 40px;
+    border-right: 1px solid #777;
+}
+
+.month{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.year{
+    margin-top: 10px;
+    font-size: 20px;
+    letter-spacing: 8px;
+}
+
+.time1{
+    font-size: 25px;
+    height: 65px;
+    text-align: left;
+    padding-left: 30px;
+}
+.inside-left{
+    background-color: #f9f6ef;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    z-index: 1;
+}
+.background1{
+    width: 580px;
+    height: 775px;
+    clip-path: polygon(50% 5%,93.3% 25%,93.3% 75%,50% 95%,6.7% 75%,6.7% 25%);
+    background-color: #f9f6ef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.background2{
+    width: 550px;
+    height: 734px;
+    clip-path: polygon(50% 0%,93.3% 25%,93.3% 75%,50% 100%,6.7% 75%,6.7% 25%);
+    background-color: #92725d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(340deg);
+}
+.background3{
+    width: 530px;
+    height: 710px;
+    clip-path: polygon(50% 0%,93.3% 25%,93.3% 75%,50% 100%,6.7% 75%,6.7% 25%);
+    background-color: #f9f6ef;
+}
+.s-background{
+    width: 600px;
+    height: 800px;
+    clip-path: polygon(50% 5%,93.3% 25%,93.3% 75%,50% 95%,6.7% 75%,6.7% 25%);
+    background-color: #92725d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(10deg);
+    position: absolute;
+    top: 0;
+    left: 60px;
+    z-index: 1;
+}
+.wedding{
+    width: 536px;
+}
+.cover,
+.inside-left{
+    backface-visibility: hidden;
+}
+.inside-right{
+    background-color: #f9f6ef;
+    width: 650px;
+    height: 900px;
+    position: absolute;
+    top: 0;
+    right: 325px;
+    color: #6b5746;
+}
+.title{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.quote{
+    font-family: 'Dancing Script', cursive;
+    font-size: 40px;
+    color: #6b5746;
+}
+.who{
+    font-family: "Playwrite GB J", cursive;
+    font-size: 25px;
+    color: #6b5746;
+}
+.line-1{
+    margin: -10px 0 30px -30px;
+    width: 400px;
+    height: 0.8px;
+    border-top: 2px dotted #484e52;
+}
+.S-name{
+    margin: 20px 0 0 0;
+    color: #6b5746;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.sub-name{
+    font-family: 'Dancing Script', cursive;
+    font-size: 26px;
+    color: #6b5746;
+}
+.name{
+    -webkit-text-stroke: 1.4px;
+    margin-top: 40px;
+    font-family: 'Allura', cursive;
+    font-size: 60px;
+    margin-bottom: 40px;
+}
+.day{
+    font-family: 'Comfortaa', cursive;
+    font-size: 25px;
+    color: #6b5746;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.at{
+    margin-bottom: 20px;
+}
+.line-2{
+    margin: -5px 0 60px 0;
+    width: 400px;
+    height: 0.8px;
+    border-top: 2px dotted #000000;
+}
+.where{
+    margin-bottom: 20px;
+}
+.line-3{
+    margin: -5px 0 0px 0;
+    width: 450px;
+    height: 0.8px;
+    border-top: 2px dotted #000000;
+}
+.line-4{
+    margin: -5px 0 0px 0;
+    width: 240px;
+    height: 0.8px;
+    border-top: 2px dotted #000000;
+}
+.qr-address{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0px 0 0px 200px;
+    font-family: 'Comfortaa', cursive;
+}
+.qr-code{
+    width: 150px;
+    height: 150px;
+    margin: 5px 0 50px 20px;
+}
+.footer-text{
+    font-family: 'Dancing Script', cursive;
+    font-size: 40px;
+    color: #6b5746;
+    margin-left: 150px;
+}
+.slider-open{
+    position: absolute;
+    bottom: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+
+    font-family: 'Comfortaa', cursive;
+}
+.slider-text{
+    font-size: 18px;
+    color: #6b5746;
+}
+.slider-track{
+    width: 240px;
+    height: 50px;
+    border: 1px solid #9b7450;
+    border-radius: 30px;
+    position: relative;
+    background: rgba(255,255,255,.25);
+}
+.slider-thumb{
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #9b7450;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    cursor: grab;
+}
