@@ -29,7 +29,6 @@ thumb.addEventListener("mousedown", () => {
     if (isOpen) return;
     dragging = true;
 });
-
 document.addEventListener("mousemove", (e) => {
     if (!dragging || isOpen) return;
     const rect = track.getBoundingClientRect();
@@ -37,7 +36,6 @@ document.addEventListener("mousemove", (e) => {
     x = Math.max(3, Math.min(x, 190));
     thumb.style.left = x + "px";
 });
-
 document.addEventListener("mouseup", () => {
     if (!dragging) return;
     dragging = false;
@@ -49,7 +47,34 @@ document.addEventListener("mouseup", () => {
         thumb.style.left = "3px";
     }
 });
+thumb.addEventListener("touchstart", () => {
+    if (isOpen) return;
+    dragging = true;
+});
+document.addEventListener("touchmove", (e) => {
+    if (!dragging || isOpen) return;
+    const rect = track.getBoundingClientRect();
+    let x = e.touches[0].clientX - rect.left;
+    x = Math.max(3, Math.min(x, 190));
+    thumb.style.left = x + "px";
+});
+document.addEventListener("touchend", () => {
+    if (!dragging) return;
+    dragging = false;
+    const currentX = parseInt(thumb.style.left) || 3;
+    if (currentX > 170) {
+        thumb.style.left = "190px";
+        openCard();
+    } else {
+        thumb.style.left = "3px";
+    }
+});
 insideRight.addEventListener("click", () => {
+    if (isOpen) {
+        closeCard();
+    }
+});
+insideRight.addEventListener("touchstart", () => {
     if (isOpen) {
         closeCard();
     }
