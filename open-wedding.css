@@ -1,10 +1,10 @@
 body{
     background-color: #ad9280;
     margin: 0;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
 }
 .card-container{
     position: relative;
@@ -14,12 +14,13 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    top: -10px;
+    top: -5px;
 }
 .page{
     width: 650px;
-    height: 900px;
+    height: 740px;
     position: absolute;
+    top: 0;
     right: 325px;
     transform-style: preserve-3d;
     transform-origin: left center;
@@ -47,8 +48,6 @@ body{
     top: 0;
     left: 0;
     display: flex;
-    z-index: 100;
-    display: flex;
     justify-content: center;
     transform-origin: left center;
     transition: transform 1.8s ease;
@@ -57,12 +56,12 @@ body{
 }
 .background-out{
     width: 650px;
-    height: 900px;
+    height: 740px;
     position: absolute;
 }
 .content1{
     width: 550px;
-    height: 770px;
+    height: 740px;
     position: relative;
     display: flex;
     justify-content: center;
@@ -70,40 +69,40 @@ body{
     align-items: center;
 }
 .wedding1{
-    width: 300px;
-    height: 300px;
+    width: 280px;
+    height: 280px;
     border-radius: 50%;
     border: 2px solid #9b7450;
-    margin-top: -350px;
     position: absolute;
+    top: 40px;
     object-fit: cover;
 }
 .picture{
     width: 100%;
 }
 .leaf1, .leaf2{
-    width: 230px;
+    width: 200px;
 }
 .leaf1{
     position: relative;
-    top: -150px;
-    left: 250px;
+    top: -166px;
+    left: 260px;
 }
 .leaf2{
     transform: rotate(180deg);
     position: relative;
-    top: -268px;
-    right: 166px;
+    top: -283px;
+    right: 120px;
 }
 .flower1, .flower2{
-    width: 400px;
+    width: 320px;
     position: absolute;
     z-index: 10;
 }
 .flower1{
-    transform: rotate(20deg);
-    top: 345px;
-    left: 260px;
+    transform: rotate(10deg);
+    top: 340px;
+    left: 270px;
     mask-image: linear-gradient(
         to top,
         transparent 0%,
@@ -120,9 +119,9 @@ body{
     filter: drop-shadow(0 8px 12px rgba(0,0,0,0.25));
 }
 .flower2{
-    transform: rotate(200deg);
-    top: -140px;
-    right: 200px;
+    transform: rotate(190deg);
+    top: -80px;
+    right: 230px;
     mask-image: linear-gradient(
         to top,
         transparent 0%,
@@ -144,7 +143,7 @@ body{
     font-family: 'Dancing Script', cursive;
     font-size: 60px;
     position: relative;
-    bottom: -30px;
+    bottom: 0px;
 }
 .day1{
     color: #6b5746;
@@ -155,11 +154,11 @@ body{
     font-family: 'Comfortaa', cursive;
     margin-left: 40px;
     position: relative;
-    bottom: -100px;
+    bottom: -40px;
 }
 
 .days{
-    font-size: 25px;
+    font-size: 20px;
     height: 65px;
     text-align: right;
     padding-right: 30px;
@@ -175,18 +174,18 @@ body{
 }
 
 .month{
-    font-size: 40px;
+    font-size: 35px;
     font-weight: bold;
 }
 
 .year{
     margin-top: 10px;
-    font-size: 20px;
+    font-size: 18px;
     letter-spacing: 8px;
 }
 
 .time1{
-    font-size: 25px;
+    font-size: 20px;
     height: 65px;
     text-align: left;
     padding-left: 30px;
@@ -203,8 +202,8 @@ body{
     z-index: 1;
 }
 .background1{
-    width: 580px;
-    height: 775px;
+    width: 550px;
+    height: 734px;
     clip-path: polygon(50% 5%,93.3% 25%,93.3% 75%,50% 95%,6.7% 75%,6.7% 25%);
     background-color: #f9f6ef;
     display: flex;
@@ -212,8 +211,8 @@ body{
     align-items: center;
 }
 .background2{
-    width: 550px;
-    height: 734px;
+    width: 520px;
+    height: 694px;
     clip-path: polygon(50% 0%,93.3% 25%,93.3% 75%,50% 100%,6.7% 75%,6.7% 25%);
     background-color: #92725d;
     display: flex;
@@ -222,14 +221,14 @@ body{
     transform: rotate(340deg);
 }
 .background3{
-    width: 530px;
-    height: 710px;
+    width: 500px;
+    height: 668px;
     clip-path: polygon(50% 0%,93.3% 25%,93.3% 75%,50% 100%,6.7% 75%,6.7% 25%);
     background-color: #f9f6ef;
 }
 .s-background{
-    width: 600px;
-    height: 800px;
+    width: 570px;
+    height: 761px;
     clip-path: polygon(50% 5%,93.3% 25%,93.3% 75%,50% 95%,6.7% 75%,6.7% 25%);
     background-color: #92725d;
     display: flex;
@@ -237,7 +236,7 @@ body{
     align-items: center;
     transform: rotate(10deg);
     position: absolute;
-    top: 0;
+    top: -10px;
     left: 60px;
     z-index: 1;
 }
@@ -251,14 +250,14 @@ body{
 .inside-right{
     background-color: #f9f6ef;
     width: 650px;
-    height: 900px;
+    height: 740px;
     position: absolute;
     top: 0;
     right: 325px;
     color: #6b5746;
 }
 .title{
-    margin-top: 30px;
+    margin-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -281,7 +280,6 @@ body{
     border-top: 2px dotted #484e52;
 }
 .S-name{
-    margin: 20px 0 0 0;
     color: #6b5746;
     display: flex;
     align-items: center;
@@ -297,7 +295,7 @@ body{
     margin-top: 40px;
     font-family: 'Allura', cursive;
     font-size: 60px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 .day{
     font-family: 'Comfortaa', cursive;
@@ -308,15 +306,17 @@ body{
     flex-direction: column;
 }
 .at{
+    font-size: 20px;
     margin-bottom: 20px;
 }
 .line-2{
-    margin: -5px 0 60px 0;
+    margin: -5px 0 40px 0;
     width: 400px;
     height: 0.8px;
     border-top: 2px dotted #000000;
 }
 .where{
+    font-size: 20px;
     margin-bottom: 20px;
 }
 .line-3{
@@ -342,7 +342,7 @@ body{
 .qr-code{
     width: 150px;
     height: 150px;
-    margin: 5px 0 50px 20px;
+    margin: 5px 0 10px 20px;
 }
 .footer-text{
     font-family: 'Dancing Script', cursive;
@@ -352,7 +352,7 @@ body{
 }
 .slider-open{
     position: absolute;
-    bottom: 0;
+    bottom: 70px;
 
     display: flex;
     flex-direction: column;
@@ -362,20 +362,21 @@ body{
     font-family: 'Comfortaa', cursive;
 }
 .slider-text{
-    font-size: 18px;
+    font-size: 22px;
     color: #6b5746;
 }
 .slider-track{
-    width: 240px;
-    height: 50px;
+    width: 400px;
+    height: 70px;
     border: 1px solid #9b7450;
     border-radius: 30px;
     position: relative;
     background: rgba(255,255,255,.25);
+    margin-top: -10px;
 }
 .slider-thumb{
-    width: 44px;
-    height: 44px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     background: #9b7450;
     color: white;
@@ -383,8 +384,8 @@ body{
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 3px;
-    left: 3px;
+    top: 5px;
+    left: 5px;
     cursor: grab;
     touch-action: none;
 }
@@ -396,7 +397,11 @@ body{
     }
 
     .card-container{
-        transform: scale(0.3);
-        left: 130px;
+        transform: scale(0.4);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: -5.2%;
+        left: 42%;
     }
 }
