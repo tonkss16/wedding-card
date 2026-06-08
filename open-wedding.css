@@ -53,6 +53,8 @@ body{
     transition: transform 1.8s ease;
     backface-visibility: hidden;
     z-index: 2;
+    user-select: none;
+    -webkit-user-select: none;
 }
 .background-out{
     width: 650px;
@@ -389,19 +391,29 @@ body{
     cursor: grab;
     touch-action: none;
 }
+.rolate-text{
+    position: absolute;
+    top: 25px;
+    left: 75px;
+    font-size: 18px;
+    color: #6b5746;
+}
 @media (max-width: 768px){
 
     body{
         overflow-y: auto;
-        overflow-x: hidden;
+        overflow-x: auto;
     }
 
     .card-container{
-        transform: scale(0.4);
+        transform: scale(0.5);
         display: flex;
         justify-content: center;
         align-items: center;
-        top: -5.2%;
-        left: 42%;
+        top: -5%;
+        left: 60%;
     }
+}
+*{
+    -webkit-tap-highlight-color: transparent;
 }
