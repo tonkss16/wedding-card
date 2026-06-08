@@ -410,8 +410,8 @@ body{
         display: flex;
         justify-content: center;
         align-items: center;
-        top: -5%;
-        left: 20%;
+        top: -6%;
+        left: 50%;
     }
 }
 *{
